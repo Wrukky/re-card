@@ -73,7 +73,7 @@ button:hover {
 
 /* CARD */
 #card {
-  width: 2500px;
+  width: 250px;
   height: 300px;
   margin: auto;
   background: linear-gradient(160deg, #ff5fd8, #7b61ff);
@@ -129,6 +129,7 @@ button:hover {
   font-size: 0.85rem;
   opacity: 0.7;
 }
+
 
 
 
