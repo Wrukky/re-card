@@ -14,6 +14,7 @@ body {
   overflow-x: hidden;
 }
 
+/* HEADER */
 header {
   padding: 40px 20px 20px;
 }
@@ -31,6 +32,7 @@ header p {
   opacity: 0.85;
 }
 
+/* FORM */
 .form {
   max-width: 420px;
   margin: 0 auto;
@@ -52,73 +54,11 @@ textarea {
   height: 90px;
 }
 
-button {
-  width: 100%;
-  padding: 14px;
-  border-radius: 16px;
-  border: none;
-  background: linear-gradient(135deg, #ff4ecd, #7a5cff);
-  color: white;
-  font-size: 1.1rem;
-  cursor: pointer;
-}
-
-button:hover {
-  opacity: 0.92;
-}
-
+/* PREVIEW */
 .preview {
-  padding: 30px 20px 60px;
+  padding: 30px 20px 50px;
 }
 
-/* CARD */
-#card {
-  width: 250px;
-  height: 300px;
-  margin: auto;
-  background: linear-gradient(160deg, #ff5fd8, #7b61ff);
-  border-radius: 26px;
-  padding: 22px;
-  position: relative;
-  box-shadow: 0 25px 50px rgba(0,0,0,0.45);
-}
-
-.sticker {
-  width: 90px;
-  position: absolute;
-  top: -35px;
-  right: -25px;
-  transform: rotate(12deg);
-}
-
-#cardUser {
-  margin-top: 90px;
-  font-size: 1.5rem;
-}
-
-#cardText {
-  font-size: 1.1rem;
-  margin: 22px 0;
-  line-height: 1.4;
-}
-
-.year {
-  position: absolute;
-  bottom: 22px;
-  right: 22px;
-  font-size: 1.2rem;
-}
-
-/* SNOW EFFECT */
-.snow::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: radial-gradient(white 1px, transparent 1px);
-  background-size: 60px 60px;
-  opacity: 0.15;
-  pointer-events: none;
-}
 #cardWrapper {
   display: inline-block;
   cursor: pointer;
@@ -130,6 +70,91 @@ button:hover {
   opacity: 0.7;
 }
 
+/* CARD */
+#card {
+  width: 280px;
+  height: 360px;
+  margin: auto;
+  background: linear-gradient(160deg, #ff5fd8, #7b61ff);
+  border-radius: 24px;
+  padding: 24px;
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.45);
+}
 
+#cardUser {
+  margin-top: 10px;
+  font-size: 1.45rem;
+}
 
+/* STICKER – INLINE, UNDER USERNAME */
+.sticker {
+  width: 64px;
+  display: block;
+  margin: 12px auto 16px;
+  transform: rotate(-6deg);
+}
 
+/* CARD TEXT */
+#cardText {
+  font-size: 1.05rem;
+  line-height: 1.4;
+  margin: 10px 0;
+}
+
+/* YEAR */
+.year {
+  position: absolute;
+  bottom: 18px;
+  right: 18px;
+  font-size: 1.1rem;
+}
+
+/* FOOTER */
+footer {
+  margin: 40px 0 20px;
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+footer a {
+  color: #ff9de4;
+  text-decoration: none;
+}
+
+/* ANIMATED SNOW */
+.snow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(white 1px, transparent 1px);
+  background-size: 60px 60px, 100px 100px;
+  animation: snow 12s linear infinite;
+  opacity: 0.25;
+}
+
+@keyframes snow {
+  0% { background-position: 0 0, 0 0; }
+  100% { background-position: 0 600px, 0 1000px; }
+}
+
+/* FLOATING LOVE */
+.love-layer::before {
+  content: "❤️ 💖 💕 💗 ❤️ 💖 💕";
+  position: fixed;
+  bottom: -60px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  animation: floatLove 14s linear infinite;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+@keyframes floatLove {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-120vh); }
+}
