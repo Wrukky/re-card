@@ -9,8 +9,14 @@
 
 <body>
 
+  <!-- Animated Snow -->
+  <div class="snow"></div>
+
+  <!-- Floating Love -->
+  <div class="love-layer"></div>
+
   <header>
-    <img src="logo.png" class="logo" />
+    <img src="logo.png" class="logo" alt="RE Logo" />
     <h1>RE 2026</h1>
     <p>Commit your Web3 New Year Resolution 🎆</p>
   </header>
@@ -20,25 +26,40 @@
     <textarea id="resolution" placeholder="Your New Year Resolution"></textarea>
   </section>
 
-  <!-- CLICKABLE CARD -->
   <section class="preview">
     <div id="cardWrapper">
       <div id="card">
-        <img src="logo.png" class="sticker" />
+        <h2 id="cardUser">RE 2026 resolution</h2>
         <h2 id="cardUser">@username</h2>
+
+        <!-- Sticker directly after username -->
+        <img src="logo.png" class="sticker" alt="RE Sticker" />
+
         <p id="cardText">My New Year Resolution is...</p>
         <span class="year">2026 🎇</span>
       </div>
+
       <p class="hint">Tap / Long-press to save</p>
     </div>
   </section>
 
-  <!-- html2canvas -->
+  <footer>
+    built by <a href="https://x.com/wru_kii" target="_blank">@wru_kii</a>
+  </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
   <script src="script.js"></script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
 
 
 
